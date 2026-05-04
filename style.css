@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fdf6f0;
+    color: #4b2e1e;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #d2b48c;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #4b2e1e;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #8b4513;
+}
+
+
+main {
+    position: relative;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    filter: brightness(75%);
+}
+
+main p {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 600;
+    color: maroon;
+    animation: fadeDown 1.5s ease;
+}
+
+/* Search Bar */
+main input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    animation: fadeUp 1.5s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d2b48c;
+    color: #4b2e1e;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -80%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main p {
+        font-size: 24px;
+        width: 90%;
+    }
+
+    main input {
+        width: 85%;
+    }
+}
